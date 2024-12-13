@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>长话短说</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            width: 300px;
+            padding: 16px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            background-color: #ffffff;
+        }
+
+        .container {
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .header {
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 20px;
+            margin: 0 0 16px 0;
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        .user-status {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 12px;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8px 0;
+        }
+
+        #userInfo {
+            font-size: 15px;
+            color: #2c3e50;
+            font-weight: 500;
+        }
+
+        .click-tip {
+            font-size: 13px;
+            color: #6c757d;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .click-tip:hover {
+            color: #0056b3;
+        }
+
+        .features {
+            margin-top: 16px;
+            border-top: 1px solid #e9ecef;
+            padding-top: 16px;
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            padding: 8px;
+            border-radius: 8px;
+            transition: background-color 0.2s;
+        }
+
+        .feature:hover {
+            background-color: #f8f9fa;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .logged-in {
+            color: #28a745;
+        }
+
+        .not-logged-in {
+            color: #6c757d;
+        }
+
+        .is-member {
+            position: relative;
+        }
+
+        .is-member:after {
+            content: "✨";
+            margin-left: 5px;
+            font-size: 14px;
+        }
+
+        .button {
+            background-color: #6366f1;
+            color: white;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 16px;
+            transition: background-color 0.2s;
+        }
+
+        .button:hover {
+            background-color: #4f46e5;
+        }
+
+        .button:active {
+            background-color: #4338ca;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="mainPanel" class="panel">
+            <div class="header">
+                <h1>长话短说</h1>
+                <div id="userStatus" class="user-status">
+                    <div class="user-info">
+                        <span id="userInfo">检查登录状态...</span>
+                        <span class="click-tip">点击此处登录</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="controls">
+                <div class="features">
+                    <div class="feature">
+                        <input type="checkbox" id="autoTranslate">
+                        <label for="autoTranslate">翻译页面</label>
+                    </div>
+                    <div class="feature">
+                        <input type="checkbox" id="compressPage">
+                        <label for="compressPage">压缩页面</label>
+                    </div>
+                </div>
+                <button class="button">执行长话短说</button>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="popup.js"></script>
+</body>
+</html>
